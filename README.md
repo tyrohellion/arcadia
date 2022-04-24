@@ -31,6 +31,7 @@
 -   **As simple as you want**: All code is commented!
 -   **Variables** for custom colors: [Customization](#-customization)
 -   **Keyboard** Centered Design! Here you can read about the shortcuts: [Usage](#-usage)
+-   **Feather Icons**: Using the sleek and clean feather icons!
 
 ## ⚙️ Installation
 
@@ -77,6 +78,10 @@ In this section of the code you can change the colors, there's a window color an
 
 
 ```
+
+### 🪶 Feather Icons
+
+In the icons section you can comment out any icon you don't like.
 
 ### 🚧 URL Bar
 
