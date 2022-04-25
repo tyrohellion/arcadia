@@ -42,7 +42,7 @@ by Miguel Avila
 └─┘└─┘┴─┘└─┘┴└─└─┘ 
 */
 
-/* Tabs colors  */
+/* Tabs `s  */
 #tabbrowser-tabs:not([movingtab])
   > #tabbrowser-arrowscrollbox
   > .tabbrowser-tab
@@ -87,13 +87,40 @@ by Miguel Avila
 
 */
 
-/* Tabs elements  */
-.tab-close-button {
+#page-action-buttons {
   display: none;
 }
+ 
+
+/* Tabs elements  */
+.tab-close-button {
+  /* make it transparent */
+  opacity: 0;
+  transition: 0.5s;
+  border-radius: 50%;
+}
+
+.tab-close-button:hover {
+  /* make it transparent */
+  opacity: 100;
+  transition: 0.5s;
+}
+
 
 .tabbrowser-tab:not([pinned]) .tab-icon-image {
-  display: none !important;
+  opacity: 0 !important;
+  transition: 0.5s !important;
+  width: 0px !important;
+}
+
+.tabbrowser-tab:not([pinned]):hover .tab-icon-image {
+  opacity: 100 !important;
+  transition: 0.5s !important;
+  display: inline-block !important;
+}
+
+.tabbrowser-tab:not([pinned]):hover .tab-icon-image {
+  width: 16px !important;
 }
 
 #nav-bar:not([tabs-hidden='true']) {
@@ -202,4 +229,94 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 #context_selectAllTabs,
 #context_closeTabOptions {
   display: none !important;
+}
+
+
+
+/*
+┬┌─┐┌─┐┌┐┌┌─┐
+││  │ ││││└─┐
+┴└─┘└─┘┘└┘└─┘
+Icons from Feather Icons
+https://feathericons.com/
+
+Only tested on windows, may lack support on MacOS/Linux.
+If this looks weird, comment out the window buttons section.
+*/
+
+
+
+/* browser-aero.css | chrome://browser/skin/browser-aero.css */
+
+
+.titlebar-min {
+  /* list-style-image: url(chrome://browser/skin/window-controls/minimize-highcontrast.svg); */
+  list-style-image: url(https://raw.githubusercontent.com/feathericons/feather/master/icons/minus.svg) !important;
+  fill: white !important;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(190deg) brightness(104%) contrast(102%);
+}
+.titlebar-max {
+  /* list-style-image: url(chrome://browser/skin/window-controls/maximize-highcontrast.svg); */
+  list-style-image: url(https://raw.githubusercontent.com/feathericons/feather/master/icons/maximize.svg) !important;
+  fill: white !important;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(190deg) brightness(104%) contrast(102%);
+}
+.titlebar-restore {
+  /* list-style-image: url(chrome://browser/skin/window-controls/restore-highcontrast.svg); */
+  list-style-image: url(https://raw.githubusercontent.com/feathericons/feather/master/icons/minimize.svg) !important;
+  fill: white !important;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(190deg) brightness(104%) contrast(102%);
+}
+.titlebar-close {
+  /* list-style-image: url(chrome://browser/skin/window-controls/close-highcontrast.svg); */
+  list-style-image: url(https://raw.githubusercontent.com/feathericons/feather/master/icons/x.svg) !important;
+  fill: white !important;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(190deg) brightness(104%) contrast(102%);
+}
+.titlebar-close:hover {
+  /* list-style-image: url(chrome://browser/skin/window-controls/close-highcontrast.svg); */
+  background-color: red !important;
+}
+
+/* toolbarbutton-icons.css | chrome://browser/skin/toolbarbutton-icons.css */
+
+#reload-button {
+  /* list-style-image: url("chrome://global/skin/icons/reload.svg"); */
+  /* list-style-image: url(")"); */
+  list-style-image: url(https://raw.githubusercontent.com/feathericons/feather/master/icons/refresh-ccw.svg) !important; 
+  fill: white !important;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(190deg) brightness(104%) contrast(102%);
+}
+
+/* identity-block.css | chrome://browser/skin/identity-block/identity-block.css */
+
+#identity-box[pageproxystate="valid"].verifiedDomain #identity-icon, #identity-box[pageproxystate="valid"].mixedActiveBlocked #identity-icon {
+  /* list-style-image: url(chrome://global/skin/icons/security.svg); */
+  list-style-image: url(https://raw.githubusercontent.com/feathericons/feather/master/icons/lock.svg) !important;
+  fill: white !important;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(190deg) brightness(104%) contrast(102%);
+}
+
+/* tabs.css | chrome://browser/skin/tabs.css */
+
+#tabs-newtab-button, #TabsToolbar #new-tab-button {
+  /* list-style-image: url(chrome://global/skin/icons/plus.svg); */
+  list-style-image: url(https://raw.githubusercontent.com/feathericons/feather/master/icons/plus.svg) !important;
+  fill: white !important;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(190deg) brightness(104%) contrast(102%);
+}
+
+
+#alltabs-button {
+  /* list-style-image: url(chrome://global/skin/icons/arrow-down.svg); */
+  list-style-image: url(https://raw.githubusercontent.com/feathericons/feather/master/icons/chevron-down.svg) !important;
+  fill: white !important;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(190deg) brightness(104%) contrast(102%);
+}
+
+
+#permissions-granted-icon {
+  list-style-image: url(https://raw.githubusercontent.com/feathericons/feather/f81cd40fdcdd5e94f3f97eb670a5058e3aac528d/icons/toggle-left.svg) !important;
+  fill: white !important;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(190deg) brightness(104%) contrast(102%) !important;
 }
