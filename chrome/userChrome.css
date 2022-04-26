@@ -251,25 +251,25 @@ If this looks weird, comment out the window buttons section.
 
 .titlebar-min {
   /* list-style-image: url(chrome://browser/skin/window-controls/minimize-highcontrast.svg); */
-  list-style-image: url(https://raw.githubusercontent.com/feathericons/feather/master/icons/minus.svg) !important;
+  list-style-image: url(./minus.svg) !important;
   fill: white !important;
   filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(190deg) brightness(104%) contrast(102%);
 }
 .titlebar-max {
   /* list-style-image: url(chrome://browser/skin/window-controls/maximize-highcontrast.svg); */
-  list-style-image: url(https://raw.githubusercontent.com/feathericons/feather/master/icons/maximize.svg) !important;
+  list-style-image: url(./maximize.svg) !important;
   fill: white !important;
   filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(190deg) brightness(104%) contrast(102%);
 }
 .titlebar-restore {
   /* list-style-image: url(chrome://browser/skin/window-controls/restore-highcontrast.svg); */
-  list-style-image: url(https://raw.githubusercontent.com/feathericons/feather/master/icons/minimize.svg) !important;
+  list-style-image: url(./minimize.svg) !important;
   fill: white !important;
   filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(190deg) brightness(104%) contrast(102%);
 }
 .titlebar-close {
   /* list-style-image: url(chrome://browser/skin/window-controls/close-highcontrast.svg); */
-  list-style-image: url(https://raw.githubusercontent.com/feathericons/feather/master/icons/x.svg) !important;
+  list-style-image: url(./x.svg) !important;
   fill: white !important;
   filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(190deg) brightness(104%) contrast(102%);
 }
@@ -283,7 +283,7 @@ If this looks weird, comment out the window buttons section.
 #reload-button {
   /* list-style-image: url("chrome://global/skin/icons/reload.svg"); */
   /* list-style-image: url(")"); */
-  list-style-image: url(https://raw.githubusercontent.com/feathericons/feather/master/icons/refresh-ccw.svg) !important; 
+  list-style-image: url(./refresh-ccw.svg) !important; 
   fill: white !important;
   filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(190deg) brightness(104%) contrast(102%);
 }
@@ -292,7 +292,7 @@ If this looks weird, comment out the window buttons section.
 
 #identity-box[pageproxystate="valid"].verifiedDomain #identity-icon, #identity-box[pageproxystate="valid"].mixedActiveBlocked #identity-icon {
   /* list-style-image: url(chrome://global/skin/icons/security.svg); */
-  list-style-image: url(https://raw.githubusercontent.com/feathericons/feather/master/icons/lock.svg) !important;
+  list-style-image: url(./lock.svg) !important;
   fill: white !important;
   filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(190deg) brightness(104%) contrast(102%);
 }
@@ -301,7 +301,7 @@ If this looks weird, comment out the window buttons section.
 
 #tabs-newtab-button, #TabsToolbar #new-tab-button {
   /* list-style-image: url(chrome://global/skin/icons/plus.svg); */
-  list-style-image: url(https://raw.githubusercontent.com/feathericons/feather/master/icons/plus.svg) !important;
+  list-style-image: url(./plus.svg) !important;
   fill: white !important;
   filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(190deg) brightness(104%) contrast(102%);
 }
@@ -309,14 +309,14 @@ If this looks weird, comment out the window buttons section.
 
 #alltabs-button {
   /* list-style-image: url(chrome://global/skin/icons/arrow-down.svg); */
-  list-style-image: url(https://raw.githubusercontent.com/feathericons/feather/master/icons/chevron-down.svg) !important;
+  list-style-image: url(./chevron-down.svg) !important;
   fill: white !important;
   filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(190deg) brightness(104%) contrast(102%);
 }
 
 
 #permissions-granted-icon {
-  list-style-image: url(https://raw.githubusercontent.com/feathericons/feather/f81cd40fdcdd5e94f3f97eb670a5058e3aac528d/icons/toggle-left.svg) !important;
+  list-style-image: url(./toggle-left.svg) !important;
   fill: white !important;
   filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(190deg) brightness(104%) contrast(102%) !important;
 }
