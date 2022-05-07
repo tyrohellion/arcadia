@@ -19,6 +19,7 @@
 - [🚀 Usage](#-usage)
 - [🎨 Customization](#-customization)
   - [💛 Colors](#-colors)
+  - [🪶 Icons](#-feather-icons)
   - [🚧 URL Bar](#-url-bar)
   - [🔧 Recommended settings](#-recommended-settings)
   - [🍱 Startpage](#-startpage)
