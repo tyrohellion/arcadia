@@ -1,40 +1,27 @@
-/* 
-┌─┐┬┌┬┐┌─┐┬  ┌─┐
-└─┐││││├─┘│  ├┤ 
-└─┘┴┴ ┴┴  ┴─┘└─┘
-┌─┐┌─┐─┐ ┬      
-├┤ │ │┌┴┬┘      
-└  └─┘┴ └─
-
-by Miguel Avila
-
-*/
-
-/*
- 
-┌─┐┌─┐┌┐┌┌─┐┬┌─┐┬ ┬┬─┐┌─┐┌┬┐┬┌─┐┌┐┌
-│  │ ││││├┤ ││ ┬│ │├┬┘├─┤ │ ││ ││││
-└─┘└─┘┘└┘└  ┴└─┘└─┘┴└─┴ ┴ ┴ ┴└─┘┘└┘
-
-*/
-
 :root {
   --sfwindow: #19171a;
   --sfsecondary: #201e21;
 }
 
-/* Urlbar View */
+/* Urlbar View customizations */
+#urlbar-background, .urlbarView-results[wrap] > .urlbarView-row, .search-one-offs {background-color: #201E21 !important; border: none !important;}
+.urlbarView-row:hover > .urlbarView-row-inner {background-color: #19171a !important;}
 
-/*─────────────────────────────*/
-/* Comment this section if you */
-/* want to show the URL Bar    */
-/*─────────────────────────────*/
+/* removes the firefox suggest text from urlbarview */
+.urlbarView-row[label="Firefox Suggest"]::before{ display: none !important; }
+.urlbarView-row[label="Firefox Suggest"]{ margin-top: 0 !important; }
 
-.urlbarView {
+/* Removes search engine support */
+#urlbar .search-one-offs {
   display: none !important;
+  }
+
+/* Removes the switch tab buttons in urlbarview */
+.urlbarView-row:is([type="switchtab"],
+  [type="remotetab"]) > .urlbarView-row-inner > .urlbarView-no-wrap > .urlbarView-action  {
+    display:none !important;
 }
 
-/*─────────────────────────────*/
 
 /* 
 ┌─┐┌─┐┬  ┌─┐┬─┐┌─┐
@@ -115,12 +102,16 @@ by Miguel Avila
 
 .tabbrowser-tab:not([pinned]):hover .tab-icon-image {
   opacity: 100 !important;
-  transition: 0.5s !important;
+  transition: 0.3s !important;
   display: inline-block !important;
 }
 
 .tabbrowser-tab:not([pinned]):hover .tab-icon-image {
   width: 16px !important;
+}
+
+.tab-icon-overlay {
+  display:none !important;
 }
 
 #nav-bar:not([tabs-hidden='true']) {
@@ -158,6 +149,16 @@ by Miguel Avila
   padding-left: 0 !important;
 }
 
+#tabbrowser-tabs:not([overflow="true"]) ~ #alltabs-button {
+  display: none !important;
+}
+
+.titlebar-spacer {
+  display: none;
+}
+
+
+
 /* Url Bar  */
 #urlbar-input-container {
   background-color: var(--sfsecondary) !important;
@@ -179,6 +180,7 @@ by Miguel Avila
 /* Bookmarks bar  */
 .bookmark-item .toolbarbutton-icon {
   display: none;
+  
 }
 toolbarbutton.bookmark-item:not(.subviewbutton) {
   min-width: 1.6em;
@@ -258,7 +260,7 @@ If this looks weird, comment out the window buttons section.
 .titlebar-max {
   /* list-style-image: url(chrome://browser/skin/window-controls/maximize-highcontrast.svg); */
   list-style-image: url(./maximize.svg) !important;
-  fill: white !important;
+  fill: rgb(180, 180, 180) !important;
   filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(190deg) brightness(104%) contrast(102%);
 }
 .titlebar-restore {
@@ -270,13 +272,14 @@ If this looks weird, comment out the window buttons section.
 .titlebar-close {
   /* list-style-image: url(chrome://browser/skin/window-controls/close-highcontrast.svg); */
   list-style-image: url(./x.svg) !important;
-  fill: white !important;
+  fill: rgb(255, 255, 255) !important;
   filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(190deg) brightness(104%) contrast(102%);
 }
 .titlebar-close:hover {
   /* list-style-image: url(chrome://browser/skin/window-controls/close-highcontrast.svg); */
-  background-color: red !important;
+  background-color: rgb(156, 156, 156) !important;
 }
+
 
 /* toolbarbutton-icons.css | chrome://browser/skin/toolbarbutton-icons.css */
 
