@@ -1,3 +1,7 @@
+## Preview
+![](https://github.com/tyrohellion/arcadia/blob/tyrohellion-temp/preview.png)
+
+
 ## Installation
 
 1. In the searchbar type `about:config`. A dialog will be shown to you. Press the **I accept the risk** button.
