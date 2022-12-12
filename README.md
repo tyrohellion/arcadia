@@ -14,6 +14,6 @@
 
 
 ## Changes I like to do for this look
--Hide firefox view button
--Add invisible padding to the left of the window buttons for tab overflow 
--Add the settings, history, and downloads buttons to the toolbar
+    1. Hide firefox view button
+    2. Add invisible padding to the left of the window buttons for tab overflow 
+    3. Add the settings, history, and downloads buttons to the toolbar
