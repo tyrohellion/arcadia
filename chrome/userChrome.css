@@ -1,3 +1,20 @@
+/* 
+ARCADIA
+
+by Miguel Avila
+
+  edited by tyrohellion
+
+*/
+
+/*
+ 
+┌─┐┌─┐┌┐┌┌─┐┬┌─┐┬ ┬┬─┐┌─┐┌┬┐┬┌─┐┌┐┌
+│  │ ││││├┤ ││ ┬│ │├┬┘├─┤ │ ││ ││││
+└─┘└─┘┘└┘└  ┴└─┘└─┘┴└─┴ ┴ ┴ ┴└─┘┘└┘
+
+*/
+
 :root {
   --sfwindow: #19171a;
   --sfsecondary: #201e21;
@@ -260,12 +277,12 @@ If this looks weird, comment out the window buttons section.
 .titlebar-max {
   /* list-style-image: url(chrome://browser/skin/window-controls/maximize-highcontrast.svg); */
   list-style-image: url(./maximize.svg) !important;
-  fill: rgb(180, 180, 180) !important;
+  fill: white !important;
   filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(190deg) brightness(104%) contrast(102%);
 }
 .titlebar-restore {
   /* list-style-image: url(chrome://browser/skin/window-controls/restore-highcontrast.svg); */
-  list-style-image: url(./minimize.svg) !important;
+  list-style-image: url(./maximize.svg) !important;
   fill: white !important;
   filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(190deg) brightness(104%) contrast(102%);
 }
@@ -279,7 +296,6 @@ If this looks weird, comment out the window buttons section.
   /* list-style-image: url(chrome://browser/skin/window-controls/close-highcontrast.svg); */
   background-color: rgb(156, 156, 156) !important;
 }
-
 
 /* toolbarbutton-icons.css | chrome://browser/skin/toolbarbutton-icons.css */
 
