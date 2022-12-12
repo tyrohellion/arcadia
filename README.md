@@ -11,3 +11,9 @@
     - If you're on Windows: `C:\Users\<USERNAME>\AppData\Roaming\Mozilla\Firefox\Profiles\XXXXXXX.default-XXXXXX`
     - If you're on MacOS: `Users/<USERNAME>/Library/Application Support/Firefox/Profiles/XXXXXXX.default-XXXXXXX` 
 4. Move the `chrome` folder into the directory.
+
+
+## Changes I like to do for this look
+-Hide firefox view button
+-Add invisible padding to the left of the window buttons for tab overflow 
+-Add the settings, history, and downloads buttons to the toolbar
