@@ -1,5 +1,5 @@
 ## Preview
-![](https://github.com/tyrohellion/arcadia/blob/tyrohellion-temp/preview.png)
+![](https://github.com/tyrohellion/arcadia/blob/tyrohellion-temp/preview.PNG)
 
 
 ## Installation
