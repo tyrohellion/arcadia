@@ -4,8 +4,9 @@
 
 ## Installation
 
-3. enter about:profiles
-4. Move the `chrome` folder and `user.js` file into the directory.
+1. Enter `about:profiles`
+2. Press `Open Folder` under Root Directory
+3. Move the `chrome` folder and `user.js` file into the directory.
 
 
 ## Changes I like to do for this look
