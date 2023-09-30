@@ -45,3 +45,13 @@ user_pref("svg.context-properties.content.enabled", true);
 
 /** REMOVE CLUTTER ***/
 user_pref("browser.tabs.firefox-view", false);
+
+/** REMOVE ALT KEY MENU ***/
+user_pref("ui.key.menuAccessKeyFocuses", false);
+
+/** REMOVE FULLSCREEN FADE IN AND OUT ***/
+user_pref("full-screen-api.transition-duration.enter", 0);
+user_pref("full-screen-api.transition-duration.leave", 0);
+
+/** REMOVE FULLSCREEN POPUP ***/
+user_pref("full-screen-api.warning.timeout", 0);
