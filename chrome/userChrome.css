@@ -47,6 +47,10 @@ by Miguel Avila
 */
 
 /* Tabs `s  */
+.tabbrowser-tab[selected="true"] .tab-background {
+  background: #201E21 none !important;
+}
+
 #tabbrowser-tabs:not([movingtab])
   > #tabbrowser-arrowscrollbox
   > .tabbrowser-tab
