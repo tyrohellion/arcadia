@@ -1,6 +1,6 @@
 ## Preview
-![](https://github.com/tyrohellion/arcadia/blob/master/preview.PNG)
-
+![](https://github.com/tyrohellion/arcadia/blob/master/preview.png)
+![](https://github.com/tyrohellion/arcadia/blob/master/hovercard.png)
 
 ## Installation
 
