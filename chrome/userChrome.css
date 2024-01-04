@@ -1,55 +1,20 @@
 /* 
-ARCADIA
 
-by Miguel Avila
-
-  edited by tyrohellion
+COLORS
 
 */
 
-/*
- 
-┌─┐┌─┐┌┐┌┌─┐┬┌─┐┬ ┬┬─┐┌─┐┌┬┐┬┌─┐┌┐┌
-│  │ ││││├┤ ││ ┬│ │├┬┘├─┤ │ ││ ││││
-└─┘└─┘┘└┘└  ┴└─┘└─┘┴└─┴ ┴ ┴ ┴└─┘┘└┘
-
-*/
 
 :root {
   --sfwindow: #19171a;
   --sfsecondary: #201e21;
 }
 
-/* Urlbar View customizations */
-#urlbar-background, .urlbarView-results[wrap] > .urlbarView-row, .search-one-offs {background-color: #201E21 !important; border: none !important;}
-.urlbarView-row:hover > .urlbarView-row-inner {background-color: #19171a !important;}
-
-/* removes the firefox suggest text from urlbarview */
-.urlbarView-row[label="Firefox Suggest"]::before{ display: none !important; }
-.urlbarView-row[label="Firefox Suggest"]{ margin-top: 0 !important; }
-
-/* Removes search engine support */
-#urlbar .search-one-offs {
-  display: none !important;
-  }
-
-/* Removes the switch tab buttons in urlbarview */
-.urlbarView-row:is([type="switchtab"],
-  [type="remotetab"]) > .urlbarView-row-inner > .urlbarView-no-wrap > .urlbarView-action  {
-    display:none !important;
-}
-
-
-/* 
-┌─┐┌─┐┬  ┌─┐┬─┐┌─┐
-│  │ ││  │ │├┬┘└─┐
-└─┘└─┘┴─┘└─┘┴└─└─┘ 
-*/
-
 /* Tabs `s  */
 .tabbrowser-tab[selected="true"] .tab-background {
   background: #201E21 none !important;
 }
+
 
 #tabbrowser-tabs:not([movingtab])
   > #tabbrowser-arrowscrollbox
@@ -84,14 +49,120 @@ by Miguel Avila
   background-color: var(--sfwindow) !important;
 }
 
+
+/* hover card extension  */
+#navigator-toolbox:-moz-lwtheme,
+.browserContainer > findbar:-moz-lwtheme {
+	background-image: none !important;
+}
+
+#tabbrowser-tab-tooltip {
+	display: none !important;
+}
+
+.tabbrowser-tab::after {
+	--preview-delay: 1s; /* Delay of tab preview when the cursor move onto a tab from outside of tab bar */
+	--preview-delay-tolerance: 0.25s; /* Max time period of cursor not hovering on tab bar before preview delay re-engages */
+	--preview-width: 250px; /* Width of the preview panel */
+	--preview-height: 125px; /* Height of the preview panel */
+}
+
+.tabbrowser-tab::after {
+	box-shadow: 0 0 50px black, 0 0 0 1px var(--arrowpanel-border-color) inset;
+	pointer-events: none;
+	content: "";
+	display: none;
+	position: absolute;
+	z-index: 10000;
+	top: 40px /* Edit if the preview panel is misplaced */;
+	width: var(--preview-width);
+	height: var(--preview-height);
+	background-color: var(--lwt-accent-color);
+	background-image: var(--lwt-additional-images);
+	background-repeat: no-repeat;
+	background-clip: padding-box;
+	border-radius: 8px;
+	image-rendering: optimizequality;
+}
+
+#tabbrowser-arrowscrollbox:not(:hover) .tabbrowser-tab::after {
+	transition: filter 0s var(--preview-delay-tolerance);
+	filter: opacity(0);
+}
+
+#tabbrowser-arrowscrollbox:hover .tabbrowser-tab::after {
+	transition: filter 0s var(--preview-delay);
+	filter: opacity(1);
+}
+
+.tabbrowser-tab:not(:hover)::after {
+	opacity: 0;
+}
+
+.tabbrowser-tab:hover::after {
+	opacity: 1;
+}
+
+.tabbrowser-tab[selected]:hover::after {
+	opacity: 0;
+
+}
+
+.tabbrowser-tab:nth-of-type(1)::after {
+	display: block;
+	background-size: cover, 0, 0, 0, 0, 0, 0, 0, 0, 0;
+}
+
+.tabbrowser-tab:nth-of-type(2)::after {
+	display: block;
+	background-size: 0, cover, 0, 0, 0, 0, 0, 0, 0, 0;
+}
+
+.tabbrowser-tab:nth-of-type(3)::after {
+	display: block;
+	background-size: 0, 0, cover, 0, 0, 0, 0, 0, 0, 0;
+}
+
+.tabbrowser-tab:nth-of-type(4)::after {
+	display: block;
+	background-size: 0, 0, 0, cover, 0, 0, 0, 0, 0, 0;
+}
+
+.tabbrowser-tab:nth-of-type(5)::after {
+	display: block;
+	background-size: 0, 0, 0, 0, cover, 0, 0, 0, 0, 0;
+}
+
+.tabbrowser-tab:nth-of-type(6)::after {
+	display: block;
+	background-size: 0, 0, 0, 0, 0, cover, 0, 0, 0, 0;
+}
+
+.tabbrowser-tab:nth-of-type(7)::after {
+	display: block;
+	background-size: 0, 0, 0, 0, 0, 0, cover, 0, 0, 0;
+}
+
+.tabbrowser-tab:nth-of-type(8)::after {
+	display: block;
+	background-size: 0, 0, 0, 0, 0, 0, 0, cover, 0, 0;
+}
+
+.tabbrowser-tab:nth-of-type(9)::after {
+	display: block;
+	background-size: 0, 0, 0, 0, 0, 0, 0, 0, cover, 0;
+}
+
+.tabbrowser-tab:nth-of-type(10)::after {
+	display: block;
+	background-size: 0, 0, 0, 0, 0, 0, 0, 0, 0, cover;
+}
+
+
+
 /* 
 
-┌┬┐┌─┐┬  ┌─┐┌┬┐┌─┐            
- ││├┤ │  ├┤  │ ├┤             
-─┴┘└─┘┴─┘└─┘ ┴ └─┘            
-┌─┐┌─┐┌┬┐┌─┐┌─┐┌┐┌┌─┐┌┐┌┌┬┐┌─┐
-│  │ ││││├─┘│ ││││├┤ │││ │ └─┐
-└─┘└─┘┴ ┴┴  └─┘┘└┘└─┘┘└┘ ┴ └─┘
+REMOVED ELEMENTS
 
 */
 
@@ -143,7 +214,8 @@ display: none !important;
 }
 
 :root {
-  --toolbarbutton-border-radius: 0 !important;
+  --toolbarbutton-border-radius: 5px !important;
+  --toolbar-field-focus-border-color: transparent !important;
   --tab-border-radius: 0 !important;
   --tab-block-margin: 0 !important;
 }
@@ -175,15 +247,41 @@ display: none !important;
   display: none;
 }
 
+image.autoplay-media-icon {
+    display: none !important;
+}
+
+/* Disable elements  */
+#context_bookmarkTab,
+#context_moveTabOptions,
+#context_sendTabToDevice,
+#context_reopenInContainer,
+#context_selectAllTabs,
+#context_closeTabOptions {
+  display: none !important;
+}
 
 
 /* Url Bar  */
+
+
+/* Urlbar View customizations */
+#urlbar-background, .urlbarView-results[wrap] > .urlbarView-row, .search-one-offs {
+	background-color: #201E21 !important; 
+	border: none !important; 
+	}
+	
+.urlbarView-row:hover > .urlbarView-row-inner {
+	background-color: #19171a !important;
+	}
+
 #urlbar-input-container {
   background-color: var(--sfsecondary) !important;
   border: 1px solid rgba(0, 0, 0, 0) !important;
 }
 
 #urlbar-container {
+  border: none !important;
   margin-left: 0 !important;
 }
 
@@ -193,6 +291,21 @@ display: none !important;
 
 #navigator-toolbox {
   border: none !important;
+}
+
+/* removes the firefox suggest text from urlbarview */
+.urlbarView-row[label="Firefox Suggest"]::before{ display: none !important; }
+.urlbarView-row[label="Firefox Suggest"]{ margin-top: 0 !important; }
+
+/* Removes search engine support */
+#urlbar .search-one-offs {
+  display: none !important;
+  }
+
+/* Removes the switch tab buttons in urlbarview */
+.urlbarView-row:is([type="switchtab"],
+  [type="remotetab"]) > .urlbarView-row-inner > .urlbarView-no-wrap > .urlbarView-action  {
+    display:none !important;
 }
 
 /* Bookmarks bar  */
@@ -211,9 +324,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 #pageActionButton,
 #pageActionSeparator,
 #tabs-newtab-button,
-#back-button,
 #PanelUI-button,
-#forward-button,
 .tab-secondary-label {
   display: none !important;
 }
@@ -222,49 +333,16 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   color: #dedede !important;
 }
 
-/* Disable elements  */
-#context-navigation,
-#context-savepage,
-#context-pocket,
-#context-sendpagetodevice,
-#context-selectall,
-#context-viewsource,
-#context-inspect-a11y,
-#context-sendlinktodevice,
-#context-openlinkinusercontext-menu,
-#context-bookmarklink,
-#context-savelink,
-#context-savelinktopocket,
-#context-sendlinktodevice,
-#context-searchselect,
-#context-sendimage,
-#context-print-selection {
-  display: none !important;
-}
-
-#context_bookmarkTab,
-#context_moveTabOptions,
-#context_sendTabToDevice,
-#context_reopenInContainer,
-#context_selectAllTabs,
-#context_closeTabOptions {
-  display: none !important;
-}
-
-
-
 /*
-┬┌─┐┌─┐┌┐┌┌─┐
-││  │ ││││└─┐
-┴└─┘└─┘┘└┘└─┘
+
+ICONS
+
 Icons from Feather Icons
 https://feathericons.com/
 
 Only tested on windows, may lack support on MacOS/Linux.
 If this looks weird, comment out the window buttons section.
 */
-
-
 
 /* browser-aero.css | chrome://browser/skin/browser-aero.css */
 
