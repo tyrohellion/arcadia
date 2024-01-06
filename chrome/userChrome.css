@@ -1,9 +1,6 @@
 /* 
-
 COLORS
-
 */
-
 
 :root {
   --sfwindow: #19171a;
@@ -14,7 +11,6 @@ COLORS
 .tabbrowser-tab[selected="true"] .tab-background {
   background: #201E21 none !important;
 }
-
 
 #tabbrowser-tabs:not([movingtab])
   > #tabbrowser-arrowscrollbox
@@ -48,7 +44,6 @@ COLORS
 .sidebar-placesTree {
   background-color: var(--sfwindow) !important;
 }
-
 
 /* hover card extension  */
 #navigator-toolbox:-moz-lwtheme,
@@ -159,44 +154,39 @@ COLORS
 }
 
 
-
 /* 
-
 REMOVED ELEMENTS
-
 */
-
-
 
 #page-action-buttons {
   display: none;
 }
- 
 
 /* Tabs elements  */
 .tab-close-button {
-  /* make it transparent */
+/* make it transparent */
   opacity: 0;
   border-radius: 50%;
 }
 
-
 /* remove loading icon  */
-.tab-throbber{ display: none !important;}
-
+.tab-throbber { 
+  display: none !important;
+}
 
 /* make tab close button instantly show up  */
 .tabbrowser-tab:not([pinned]):hover .tab-close-button {
   opacity: 100 !important;
 }
+
 /* remove loading burst  */
 .tabbrowser-tab[image^="chrome:"] .tab-loading-burst {
-    display: none;
+  display: none;
 }
 
 /* remove website icons in tabs  */
 .tabbrowser-tab .tab-icon-image {
-display: none !important;
+  display: none !important;
 }
 
 .tab-icon-overlay {
@@ -247,11 +237,9 @@ display: none !important;
   display: none;
 }
 
-image.autoplay-media-icon {
-    display: none !important;
-}
 
 /* Disable elements  */
+#image.autoplay-media-icon,
 #context_bookmarkTab,
 #context_moveTabOptions,
 #context_sendTabToDevice,
@@ -264,16 +252,32 @@ image.autoplay-media-icon {
 
 /* Url Bar  */
 
+/*   not sure if I want to add this or not
+.urlbarView-favicon,
+.urlbarView-type-icon {
+  display: none;
+}
+*/
+
+.urlbarView-row[selected] .urlbarView-row-inner,
+.urlbarView-row:hover .urlbarView-row-inner { 
+ background-color: #312d31 !important; 
+}
+
+#urlbar[breakout][breakout-extend][open] > #urlbar-input-container {
+  border-radius: var(--toolbarbutton-border-radius) var(--toolbarbutton-border-radius) 0 0 !important;
+  background-color: #201E21 !important;
+}
 
 /* Urlbar View customizations */
 #urlbar-background, .urlbarView-results[wrap] > .urlbarView-row, .search-one-offs {
 	background-color: #201E21 !important; 
-	border: none !important; 
-	}
+	border: none !important;
+}
 	
 .urlbarView-row:hover > .urlbarView-row-inner {
 	background-color: #19171a !important;
-	}
+}
 
 #urlbar-input-container {
   background-color: var(--sfsecondary) !important;
@@ -300,7 +304,7 @@ image.autoplay-media-icon {
 /* Removes search engine support */
 #urlbar .search-one-offs {
   display: none !important;
-  }
+}
 
 /* Removes the switch tab buttons in urlbarview */
 .urlbarView-row:is([type="switchtab"],
