@@ -1,0 +1,401 @@
+/* 
+COLORS
+*/
+
+:root {
+  --sfwindow: #19171a;
+  --sfsecondary: #201e21;
+}
+
+/* Tabs `s  */
+.tabbrowser-tab[selected="true"] .tab-background {
+  background: #201E21 none !important;
+}
+
+#tabbrowser-tabs:not([movingtab])
+  > #tabbrowser-arrowscrollbox
+  > .tabbrowser-tab
+  > .tab-stack
+  > .tab-background[multiselected='true'],
+#tabbrowser-tabs:not([movingtab])
+  > #tabbrowser-arrowscrollbox
+  > .tabbrowser-tab
+  > .tab-stack
+  > .tab-background[selected='true'] {
+  background-image: none !important;
+  background-color: var(--toolbar-bgcolor) !important;
+}
+
+/* Inactive tabs color */
+#navigator-toolbox {
+  background-color: var(--sfwindow) !important;
+}
+
+/* Window colors  */
+:root {
+  --toolbar-bgcolor: var(--sfsecondary) !important;
+  --tabs-border-color: var(--sfsecondary) !important;
+  --lwt-sidebar-background-color: var(--sfwindow) !important;
+  --lwt-toolbar-field-focus: var(--sfsecondary) !important;
+}
+
+/* Sidebar color  */
+#sidebar-box,
+.sidebar-placesTree {
+  background-color: var(--sfwindow) !important;
+}
+
+/* hover card extension  */
+#navigator-toolbox:-moz-lwtheme,
+.browserContainer > findbar:-moz-lwtheme {
+	background-image: none !important;
+}
+
+#tabbrowser-tab-tooltip {
+	display: none !important;
+}
+
+.tabbrowser-tab::after {
+	--preview-delay: 1s; /* Delay of tab preview when the cursor move onto a tab from outside of tab bar */
+	--preview-delay-tolerance: 0.25s; /* Max time period of cursor not hovering on tab bar before preview delay re-engages */
+	--preview-width: 250px; /* Width of the preview panel */
+	--preview-height: 125px; /* Height of the preview panel */
+}
+
+.tabbrowser-tab::after {
+	box-shadow: 0 0 50px black, 0 0 0 1px var(--arrowpanel-border-color) inset;
+	pointer-events: none;
+	content: "";
+	display: none;
+	position: absolute;
+	z-index: 10000;
+	top: 40px /* Edit if the preview panel is misplaced */;
+	width: var(--preview-width);
+	height: var(--preview-height);
+	background-color: var(--lwt-accent-color);
+	background-image: var(--lwt-additional-images);
+	background-repeat: no-repeat;
+	background-clip: padding-box;
+	border-radius: 8px;
+	image-rendering: optimizequality;
+}
+
+#tabbrowser-arrowscrollbox:not(:hover) .tabbrowser-tab::after {
+	transition: filter 0s var(--preview-delay-tolerance);
+	filter: opacity(0);
+}
+
+#tabbrowser-arrowscrollbox:hover .tabbrowser-tab::after {
+	transition: filter 0s var(--preview-delay);
+	filter: opacity(1);
+}
+
+.tabbrowser-tab:not(:hover)::after {
+	opacity: 0;
+}
+
+.tabbrowser-tab:hover::after {
+	opacity: 1;
+}
+
+.tabbrowser-tab[selected]:hover::after {
+	opacity: 0;
+
+}
+
+.tabbrowser-tab:nth-of-type(1)::after {
+	display: block;
+	background-size: cover, 0, 0, 0, 0, 0, 0, 0, 0, 0;
+}
+
+.tabbrowser-tab:nth-of-type(2)::after {
+	display: block;
+	background-size: 0, cover, 0, 0, 0, 0, 0, 0, 0, 0;
+}
+
+.tabbrowser-tab:nth-of-type(3)::after {
+	display: block;
+	background-size: 0, 0, cover, 0, 0, 0, 0, 0, 0, 0;
+}
+
+.tabbrowser-tab:nth-of-type(4)::after {
+	display: block;
+	background-size: 0, 0, 0, cover, 0, 0, 0, 0, 0, 0;
+}
+
+.tabbrowser-tab:nth-of-type(5)::after {
+	display: block;
+	background-size: 0, 0, 0, 0, cover, 0, 0, 0, 0, 0;
+}
+
+.tabbrowser-tab:nth-of-type(6)::after {
+	display: block;
+	background-size: 0, 0, 0, 0, 0, cover, 0, 0, 0, 0;
+}
+
+.tabbrowser-tab:nth-of-type(7)::after {
+	display: block;
+	background-size: 0, 0, 0, 0, 0, 0, cover, 0, 0, 0;
+}
+
+.tabbrowser-tab:nth-of-type(8)::after {
+	display: block;
+	background-size: 0, 0, 0, 0, 0, 0, 0, cover, 0, 0;
+}
+
+.tabbrowser-tab:nth-of-type(9)::after {
+	display: block;
+	background-size: 0, 0, 0, 0, 0, 0, 0, 0, cover, 0;
+}
+
+.tabbrowser-tab:nth-of-type(10)::after {
+	display: block;
+	background-size: 0, 0, 0, 0, 0, 0, 0, 0, 0, cover;
+}
+
+
+/* 
+REMOVED ELEMENTS
+*/
+
+#page-action-buttons {
+  display: none;
+}
+
+/* Tabs elements  */
+.tab-close-button {
+/* make it transparent */
+  opacity: 0;
+  border-radius: 50%;
+}
+
+/* remove loading icon  */
+.tab-throbber { 
+  display: none !important;
+}
+
+/* make tab close button instantly show up  */
+.tabbrowser-tab:not([pinned]):hover .tab-close-button {
+  opacity: 100 !important;
+}
+
+/* remove loading burst  */
+.tabbrowser-tab[image^="chrome:"] .tab-loading-burst {
+  display: none;
+}
+
+/* remove website icons in tabs  */
+.tabbrowser-tab .tab-icon-image {
+  display: none !important;
+}
+
+.tab-icon-overlay {
+  display:none !important;
+}
+
+#nav-bar:not([tabs-hidden='true']) {
+  box-shadow: none;
+}
+
+#tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs])
+  > #tabbrowser-arrowscrollbox
+  > .tabbrowser-tab[first-visible-unpinned-tab] {
+  margin-inline-start: 0 !important;
+}
+
+:root {
+  --toolbarbutton-border-radius: 5px !important;
+  --toolbar-field-focus-border-color: transparent !important;
+  --tab-border-radius: 0 !important;
+  --tab-block-margin: 0 !important;
+}
+
+.tab-background {
+  border-right: 0px solid rgba(0, 0, 0, 0) !important;
+  margin-left: -4px !important;
+}
+
+.tabbrowser-tab:is([visuallyselected='true'], [multiselected])
+  > .tab-stack
+  > .tab-background {
+  box-shadow: none !important;
+}
+
+.tabbrowser-tab[last-visible-tab='true'] {
+  padding-inline-end: 0 !important;
+}
+
+#tabs-newtab-button {
+  padding-left: 0 !important;
+}
+
+#tabbrowser-tabs:not([overflow="true"]) ~ #alltabs-button {
+  display: none !important;
+}
+
+.titlebar-spacer {
+  display: none;
+}
+
+
+/* Disable elements  */
+#image.autoplay-media-icon,
+#context_bookmarkTab,
+#context_moveTabOptions,
+#context_sendTabToDevice,
+#context_reopenInContainer,
+#context_selectAllTabs,
+#context_closeTabOptions {
+  display: none !important;
+}
+
+
+/* Url Bar  */
+
+/*   not sure if I want to add this or not
+.urlbarView-favicon,
+.urlbarView-type-icon {
+  display: none;
+}
+*/
+
+#blocked-permissions-container {
+  display: none !important;
+}
+
+.notification-anchor-icon {
+  display: none !important;
+}
+
+.blocked-permission-icon {
+  display: none !important;
+}
+
+.urlbarView-row[selected] .urlbarView-row-inner,
+.urlbarView-row:hover .urlbarView-row-inner { 
+ background-color: #312d31 !important; 
+}
+
+#urlbar[breakout][breakout-extend][open] > #urlbar-input-container {
+  border-radius: var(--toolbarbutton-border-radius) var(--toolbarbutton-border-radius) 0 0 !important;
+  background-color: #201E21 !important;
+}
+
+/* Urlbar View customizations */
+#urlbar-background, .urlbarView-results[wrap] > .urlbarView-row, .search-one-offs {
+	background-color: #201E21 !important; 
+	border: none !important;
+}
+	
+.urlbarView-row:hover > .urlbarView-row-inner {
+	background-color: #19171a !important;
+}
+
+#urlbar-input-container {
+  background-color: var(--sfsecondary) !important;
+  border: 1px solid rgba(0, 0, 0, 0) !important;
+}
+
+#urlbar-container {
+  border: none !important;
+  margin-left: 0 !important;
+}
+
+#urlbar[focused='true'] > #urlbar-background {
+  box-shadow: none !important;
+}
+
+#navigator-toolbox {
+  border: none !important;
+}
+
+/* removes the firefox suggest text from urlbarview */
+.urlbarView-row[label="Firefox Suggest"]::before{ display: none !important; }
+.urlbarView-row[label="Firefox Suggest"]{ margin-top: 0 !important; }
+
+/* Removes search engine support */
+#urlbar .search-one-offs {
+  display: none !important;
+}
+
+/* Removes the switch tab buttons in urlbarview */
+.urlbarView-row:is([type="switchtab"],
+  [type="remotetab"]) > .urlbarView-row-inner > .urlbarView-no-wrap > .urlbarView-action  {
+    display:none !important;
+}
+
+/* Bookmarks bar  */
+.bookmark-item .toolbarbutton-icon {
+  display: none;
+  
+}
+toolbarbutton.bookmark-item:not(.subviewbutton) {
+  min-width: 1.6em;
+}
+
+/* Toolbar  */
+#tracking-protection-icon-container,
+#urlbar-zoom-button,
+#star-button-box,
+#pageActionButton,
+#pageActionSeparator,
+#tabs-newtab-button,
+#PanelUI-button,
+.tab-secondary-label {
+  display: none !important;
+}
+
+.urlbarView-url {
+  color: #dedede !important;
+}
+
+/*
+
+ICONS
+
+Icons from Feather Icons
+https://feathericons.com/
+
+Only tested on windows, may lack support on MacOS/Linux.
+If this looks weird, comment out the window buttons section.
+*/
+
+/* browser-aero.css | chrome://browser/skin/browser-aero.css */
+/* toolbarbutton-icons.css | chrome://browser/skin/toolbarbutton-icons.css */
+
+#reload-button {
+  /* list-style-image: url("chrome://global/skin/icons/reload.svg"); */
+  /* list-style-image: url(")"); */
+  list-style-image: url(./refresh-ccw.svg) !important; 
+  fill: white !important;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(190deg) brightness(104%) contrast(102%);
+}
+
+/* identity-block.css | chrome://browser/skin/identity-block/identity-block.css */
+#identity-box[pageproxystate="valid"].verifiedDomain #identity-icon, #identity-box[pageproxystate="valid"].mixedActiveBlocked #identity-icon {
+  /* list-style-image: url(chrome://global/skin/icons/security.svg); */
+  list-style-image: url(./lock.svg) !important;
+  fill: white !important;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(190deg) brightness(104%) contrast(102%);
+}
+
+/* tabs.css | chrome://browser/skin/tabs.css */
+#tabs-newtab-button, #TabsToolbar #new-tab-button {
+  /* list-style-image: url(chrome://global/skin/icons/plus.svg); */
+  list-style-image: url(./plus.svg) !important;
+  fill: white !important;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(190deg) brightness(104%) contrast(102%);
+}
+
+#alltabs-button {
+  /* list-style-image: url(chrome://global/skin/icons/arrow-down.svg); */
+  list-style-image: url(./chevron-down.svg) !important;
+  fill: white !important;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(190deg) brightness(104%) contrast(102%);
+}
+
+#permissions-granted-icon {
+  list-style-image: url(./hexagon.svg) !important;
+  fill: white !important;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(190deg) brightness(104%) contrast(102%) !important;
+}
