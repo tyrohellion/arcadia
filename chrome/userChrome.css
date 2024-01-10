@@ -166,7 +166,7 @@ REMOVED ELEMENTS
 .tab-close-button {
 /* make it transparent */
   opacity: 0;
-  border-radius: 50%;
+  border-radius: 5px !important;
 }
 
 /* remove loading icon  */
