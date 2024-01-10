@@ -259,6 +259,10 @@ REMOVED ELEMENTS
 }
 */
 
+#urlbar-input::selection{
+  background-color: #312D31 !important;
+}
+
 #blocked-permissions-container {
   display: none !important;
 }
