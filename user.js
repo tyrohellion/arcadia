@@ -62,7 +62,7 @@ user_pref("network.predictor.enabled", false);
 user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
 user_pref("svg.context-properties.content.enabled", true);
 
-/** REMOVE CLUTTER ***/
+/** REMOVE FIREFOX VIEW ***/
 user_pref("browser.tabs.firefox-view", false);
 
 /** REMOVE ALT KEY MENU ***/
