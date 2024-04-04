@@ -46,6 +46,11 @@ COLORS
 }
 
 /* hover card extension  */
+
+#titlebar {
+	z-index: 10 !important;
+}
+
 #navigator-toolbox:-moz-lwtheme,
 .browserContainer > findbar:-moz-lwtheme {
 	background-image: none !important;
