@@ -45,9 +45,13 @@ COLORS
   background-color: var(--sfwindow) !important;
 }
 
-/* hover card extension  */
+/* hover card extension 
 
 #titlebar {
+	z-index: 10 !important;
+}
+
+#navigator-toolbox {
 	z-index: 10 !important;
 }
 
@@ -61,10 +65,10 @@ COLORS
 }
 
 .tabbrowser-tab::after {
-	--preview-delay: 1s; /* Delay of tab preview when the cursor move onto a tab from outside of tab bar */
-	--preview-delay-tolerance: 0.25s; /* Max time period of cursor not hovering on tab bar before preview delay re-engages */
-	--preview-width: 250px; /* Width of the preview panel */
-	--preview-height: 125px; /* Height of the preview panel */
+	--preview-delay: 1s;
+	--preview-delay-tolerance: 0.25s; 
+	--preview-width: 250px;
+	--preview-height: 125px; 
 }
 
 .tabbrowser-tab::after {
@@ -74,7 +78,7 @@ COLORS
 	display: none;
 	position: absolute;
 	z-index: 10000;
-	top: 40px /* Edit if the preview panel is misplaced */;
+	top: 40px;
 	width: var(--preview-width);
 	height: var(--preview-height);
 	background-color: var(--lwt-accent-color);
@@ -158,6 +162,7 @@ COLORS
 	background-size: 0, 0, 0, 0, 0, 0, 0, 0, 0, cover;
 }
 
+end hover card extension */
 
 /* 
 REMOVED ELEMENTS
@@ -265,7 +270,7 @@ REMOVED ELEMENTS
 */
 
 #urlbar-input::selection{
-  background-color: #312D31 !important;
+  background-color: #455074 !important;
 }
 
 #blocked-permissions-container {
@@ -336,11 +341,13 @@ REMOVED ELEMENTS
 /* Bookmarks bar  */
 .bookmark-item .toolbarbutton-icon {
   display: none;
-  
 }
+
+
 toolbarbutton.bookmark-item:not(.subviewbutton) {
   min-width: 1.6em;
 }
+
 
 /* Toolbar  */
 #tracking-protection-icon-container,
