@@ -2,7 +2,7 @@
 ![](https://github.com/tyrohellion/arcadia/blob/master/arcadia.webp)
 ## Preview
 ![](https://github.com/tyrohellion/arcadia/blob/master/1.png)
-## Hovercard
+## Hovercard (Disabled by default until fixed)
 ![](https://github.com/tyrohellion/arcadia/blob/master/hovercard.png)
 ## Urlbar view
 ![](https://github.com/tyrohellion/arcadia/blob/master/2.png)
@@ -11,9 +11,8 @@
 
 1. Enter `about:profiles`
 2. Press `Open Folder` under Root Directory
-3. Move the `chrome` folder and `user.js` file into the directory. `(the user.js is optional)`
-4. Download the [hover card firefox extension](https://github.com/easonwong-de/Tab-Preview-On-Hover)
-5. Note: This theme `requires` this extension to function properly
+3. Move the `chrome` folder and `user.js` file into the directory. `(the user.js is optional if you have the required about:config values for custom css)`
+4. (Hover Card extension is disabled by default until fixed)
 
 
 ## Changes I like to do for this look
