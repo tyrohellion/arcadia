@@ -358,6 +358,10 @@ REMOVED ELEMENTS
   display: none;
 }
 
+#PlacesToolbar, #PlacesToolbarItems {
+  padding-bottom: 1px;
+}
+
 toolbarbutton.bookmark-item:not(.subviewbutton) {
   min-width: 1.6em;
 }
