@@ -304,6 +304,7 @@ REMOVED ELEMENTS
 .search-one-offs {
   background-color: #201e21 !important;
   border: none !important;
+  box-shadow: none !important;
 }
 
 .urlbarView-row:hover > .urlbarView-row-inner {
