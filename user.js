@@ -74,3 +74,7 @@ user_pref("full-screen-api.transition-duration.leave", 0);
 
 /** REMOVE FULLSCREEN POPUP ***/
 user_pref("full-screen-api.warning.timeout", 0);
+
+/** ENABLE HOVER CARDS ***/
+user_pref("browser.tabs.hoverPreview.enabled", true);
+user_pref("browser.tabs.cardPreview.showThumbnails", true);
