@@ -5,6 +5,14 @@ COLORS
 :root {
   --sfwindow: #19171a;
   --sfsecondary: #201e21;
+  --toolbarbutton-border-radius: 5px !important;
+  --toolbar-field-focus-border-color: transparent !important;
+  --tab-border-radius: 0 !important;
+  --tab-block-margin: 0 !important;
+  --toolbar-bgcolor: var(--sfsecondary) !important;
+  --tabs-border-color: var(--sfsecondary) !important;
+  --lwt-sidebar-background-color: var(--sfwindow) !important;
+  --lwt-toolbar-field-focus: var(--sfsecondary) !important;
 }
 
 /* Tabs `s  */
@@ -31,138 +39,11 @@ COLORS
   background-color: var(--sfwindow) !important;
 }
 
-/* Window colors  */
-:root {
-  --toolbar-bgcolor: var(--sfsecondary) !important;
-  --tabs-border-color: var(--sfsecondary) !important;
-  --lwt-sidebar-background-color: var(--sfwindow) !important;
-  --lwt-toolbar-field-focus: var(--sfsecondary) !important;
-}
-
 /* Sidebar color  */
 #sidebar-box,
 .sidebar-placesTree {
   background-color: var(--sfwindow) !important;
 }
-
-/* hover card extension 
-
-
-#titlebar {
-	z-index: 10 !important;
-}
-
-#navigator-toolbox {
-	z-index: 10 !important;
-}
-
-#navigator-toolbox:-moz-lwtheme {
-  background-image: none !important;
-}
-
-#tabbrowser-tab-tooltip {
-	display: none !important;
-}
-
-.tabbrowser-tab::after {
-	--preview-delay: 1s;
-	--preview-delay-tolerance: 0.25s;
-	--preview-width: 250px;
-	--preview-height: 125px;
-}
-
-.tabbrowser-tab::after {
-	box-shadow: 0 0 50px black, 0 0 0 1px var(--arrowpanel-border-color) inset;
-	pointer-events: none;
-	content: "";
-	display: none;
-	position: absolute;
-	z-index: 10000;
-	top: 40px;
-	width: var(--preview-width);
-	height: var(--preview-height);
-	background-color: var(--lwt-accent-color);
-	background-image: var(--lwt-additional-images);
-	background-repeat: no-repeat;
-	background-clip: padding-box;
-	border-radius: 8px;
-	image-rendering: optimizequality;
-}
-
-#tabbrowser-arrowscrollbox:not(:hover) .tabbrowser-tab::after {
-	transition: filter 0s var(--preview-delay-tolerance);
-	filter: opacity(0);
-}
-
-#tabbrowser-arrowscrollbox:hover .tabbrowser-tab::after {
-	transition: filter 0s var(--preview-delay);
-	filter: opacity(1);
-}
-
-.tabbrowser-tab:not(:hover)::after {
-	opacity: 0;
-}
-
-.tabbrowser-tab:hover::after {
-	opacity: 1;
-}
-
-.tabbrowser-tab[selected]:hover::after {
-	opacity: 0;
-
-}
-
-.tabbrowser-tab:nth-of-type(1)::after {
-	display: block;
-	background-size: cover, 0, 0, 0, 0, 0, 0, 0, 0, 0;
-}
-
-.tabbrowser-tab:nth-of-type(2)::after {
-	display: block;
-	background-size: 0, cover, 0, 0, 0, 0, 0, 0, 0, 0;
-}
-
-.tabbrowser-tab:nth-of-type(3)::after {
-	display: block;
-	background-size: 0, 0, cover, 0, 0, 0, 0, 0, 0, 0;
-}
-
-.tabbrowser-tab:nth-of-type(4)::after {
-	display: block;
-	background-size: 0, 0, 0, cover, 0, 0, 0, 0, 0, 0;
-}
-
-.tabbrowser-tab:nth-of-type(5)::after {
-	display: block;
-	background-size: 0, 0, 0, 0, cover, 0, 0, 0, 0, 0;
-}
-
-.tabbrowser-tab:nth-of-type(6)::after {
-	display: block;
-	background-size: 0, 0, 0, 0, 0, cover, 0, 0, 0, 0;
-}
-
-.tabbrowser-tab:nth-of-type(7)::after {
-	display: block;
-	background-size: 0, 0, 0, 0, 0, 0, cover, 0, 0, 0;
-}
-
-.tabbrowser-tab:nth-of-type(8)::after {
-	display: block;
-	background-size: 0, 0, 0, 0, 0, 0, 0, cover, 0, 0;
-}
-
-.tabbrowser-tab:nth-of-type(9)::after {
-	display: block;
-	background-size: 0, 0, 0, 0, 0, 0, 0, 0, cover, 0;
-}
-
-.tabbrowser-tab:nth-of-type(10)::after {
-	display: block;
-	background-size: 0, 0, 0, 0, 0, 0, 0, 0, 0, cover;
-}
-
-end hover card extension */
 
 /* 
 REMOVED ELEMENTS
@@ -211,13 +92,6 @@ REMOVED ELEMENTS
   > #tabbrowser-arrowscrollbox
   > .tabbrowser-tab[first-visible-unpinned-tab] {
   margin-inline-start: 0 !important;
-}
-
-:root {
-  --toolbarbutton-border-radius: 5px !important;
-  --toolbar-field-focus-border-color: transparent !important;
-  --tab-border-radius: 0 !important;
-  --tab-block-margin: 0 !important;
 }
 
 .tab-background {
@@ -329,7 +203,9 @@ REMOVED ELEMENTS
   border: none !important;
 }
 
-#reload-button:not([displaystop]) > .toolbarbutton-animatable-box > .toolbarbutton-animatable-image {
+#reload-button:not([displaystop])
+  > .toolbarbutton-animatable-box
+  > .toolbarbutton-animatable-image {
   animation-duration: 0ms !important;
 }
 
@@ -359,7 +235,8 @@ REMOVED ELEMENTS
   display: none;
 }
 
-#PlacesToolbar, #PlacesToolbarItems {
+#PlacesToolbar,
+#PlacesToolbarItems {
   padding-bottom: 1px;
 }
 
