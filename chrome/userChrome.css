@@ -15,6 +15,33 @@ COLORS
   --lwt-toolbar-field-focus: var(--sfsecondary) !important;
 }
 
+/*default for menupopup*/
+menupopup,
+panel {
+  --panel-background: var(--sfwindow) !important;
+  --panel-border-color: rgba(255, 255, 255, 0.103) !important;
+  --panel-border-radius: 0.5rem !important;
+  --panel-shadow: none !important;
+  background: none !important;
+  margin-top: -1px !important;
+}
+
+menuitem {
+  &:where([_moz-menuactive]:not([disabled="true"])) {
+    background-color: #434145 !important;
+  }
+}
+
+menuseparator {
+  display: none !important;
+}
+
+/*default for panels*/
+panelview {
+  --arrowpanel-background: var(--sfsecondary) !important;
+  color: white !important;
+}
+
 /* Tabs `s  */
 .tabbrowser-tab[selected="true"] .tab-background {
   background: #201e21 none !important;
