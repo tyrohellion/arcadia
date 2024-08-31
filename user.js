@@ -62,6 +62,9 @@ user_pref("network.predictor.enabled", false);
 user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
 user_pref("svg.context-properties.content.enabled", true);
 
+/** EDGE LIKE SMOOTH SCROLL ***/
+user_pref("general.smoothScroll.msdPhysics.enabled", true);
+
 /** REMOVE FIREFOX VIEW ***/
 user_pref("browser.tabs.firefox-view", false);
 
