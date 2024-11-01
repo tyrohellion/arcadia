@@ -42,6 +42,18 @@ panelview {
   color: white !important;
 }
 
+/*default for html popups*/
+#ContentSelectDropdown .ContentSelectDropdown-item-0 {
+  font-size: 13px !important;
+  color: rgb(211, 211, 211) !important;
+}
+
+/*default for autoscroller*/
+#autoscroller {
+  height: 30px !important;
+  width: 30px !important;
+}
+
 /* Tabs `s  */
 .tabbrowser-tab[selected="true"] .tab-background {
   background: #201e21 none !important;
