@@ -5,13 +5,21 @@
 ## Urlbar view
 ![](https://github.com/tyrohellion/arcadia/blob/master/2.png)
 
+## What arcadia offers
+    -Minimal UI (Dark theme only)
+    -Themed hover cards for tabs (enabled by default)
+    -Text only bookmarks in bookmark bar
+    -Fastfox (from the Betterfox project) integrated through user.js by default
+    -Keeps prefetching for certain websites that choose to use it
+    -Disables smooth scrolling (can be changed in user.js)
+    -Enhanced VP9 performance for YouTube playback
+
 ## Installation
 
 1. Enter `about:profiles`
-2. Press `Open Folder` under Root Directory
-3. Move the `chrome` folder and `user.js` file into the directory. `(the user.js is optional if you have the required about:config values for custom css)`
+2. Find the box that has the value of "yes" for default profile
+3. Click `Open Folder` under Root Directory
+4. Move the `chrome` folder and `user.js` file into the directory. `(the user.js is optional if you have the required about:config values for custom css)`
 
-
-## Changes I like to do for this look
-    1. Add the "flexible space" item to the top right to have dragging space with full tabs
-    2. Add the settings, history, and downloads buttons to the toolbar
+## Note
+    All user.js options are able to be edited, if there's a setting that you prefer or works better on your system all you have to do is remove/change it. This project doesn't have any security fixes/hardening, however it can be manually added in the user.js if you choose.
