@@ -15,15 +15,21 @@ COLORS
   --lwt-toolbar-field-focus: var(--sfsecondary) !important;
 }
 
-/*default for menupopup*/
+/*apply dark theme colors for menupopups*/
 menupopup,
 panel {
   --panel-background: var(--sfwindow) !important;
   --panel-border-color: rgba(255, 255, 255, 0.103) !important;
   --panel-border-radius: 0.5rem !important;
   --panel-shadow: none !important;
+  --content-select-background-image: var(--sfwindow) !important;
   background: none !important;
   margin-top: -1px !important;
+  color-scheme: var(--sfwindow) !important;
+}
+
+.menupopup-arrowscrollbox {
+  background-color: var(--sfwindow) !important;
 }
 
 menuitem {
