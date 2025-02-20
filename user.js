@@ -25,8 +25,9 @@ user_pref("network.http.pacing.requests.enabled", false);
 user_pref("network.dnsCacheExpiration", 3600);
 user_pref("network.ssl_tokens_cache_capacity", 10240);
 
-/** YOUTUBE (better VP9 performance for my system) ***/
+/** YOUTUBE (this flag COULD give you better VP9 performance on SOME systems)
 user_pref("media.wmf.dxva.d3d11.enabled", false);
+***/
 
 /** CUSTOM CSS ***/
 user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
