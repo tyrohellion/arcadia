@@ -11,8 +11,7 @@
     -Text only bookmarks in bookmark bar
     -Fastfox (from the Betterfox project) integrated through user.js by default
     -Keeps prefetching for certain websites that choose to use it
-    -Disables smooth scrolling (can be changed in user.js)
-    -Enhanced VP9 performance for YouTube playback
+    -Natural Smooth Scrolling V3 from the BetterFox project
 
 ## Installation
 
