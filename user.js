@@ -29,6 +29,9 @@ user_pref("network.ssl_tokens_cache_capacity", 10240);
 user_pref("media.wmf.dxva.d3d11.enabled", false);
 ***/
 
+/** HARDWARE ACCELERATION ***/
+user_pref("gfx.webrender.all", true);
+
 /** CUSTOM CSS ***/
 user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
 user_pref("svg.context-properties.content.enabled", true);
