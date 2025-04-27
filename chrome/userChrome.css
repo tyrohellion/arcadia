@@ -60,9 +60,40 @@ panelview {
   width: 30px !important;
 }
 
+/* firefox view button ui */
+toolbar .toolbarbutton-1 {
+  padding: 0 !important;
+}
+
+#firefox-view-button {
+  margin: 0 !important;
+}
+
+@media not ((prefers-contrast) or -moz-pref("browser.theme.native-theme")) {
+  :root:not([lwtheme]) {
+    --tab-selected-bgcolor: #201e21 !important;
+  }
+}
+
+:root:not([privatebrowsingmode]) :is(toolbarbutton, toolbarpaletteitem) ~ #tabbrowser-tabs, :root[privatebrowsingmode] :is(toolbarbutton:not(#firefox-view-button), toolbarpaletteitem:not(#wrapper-firefox-view-button)) ~ #tabbrowser-tabs {
+  border-inline-start: none !important;
+  padding-inline-start: calc(var(--tab-overflow-pinned-tabs-width) + 0px) !important;
+  margin-inline-start: 0px !important;
+}
+
+
+/* indicator box (lock icon/firefox icon) */
+#identity-icon-box {
+  display: none !important;
+}
+
 /* Tabs `s  */
 .tabbrowser-tab[selected="true"] .tab-background {
   background: #201e21 none !important;
+}
+
+.tab-audio-button {
+  display: none !important;
 }
 
 #tabbrowser-tabs:not([movingtab])
@@ -88,6 +119,13 @@ panelview {
 #sidebar-box,
 .sidebar-placesTree {
   background-color: var(--sfwindow) !important;
+}
+
+/* navbar box wrapper */
+#nav-bar-customization-target {
+  min-width: 0 !important;
+  padding-left: 0.5rem !important;
+  padding-right: 0.5rem !important;
 }
 
 /* 
@@ -254,6 +292,10 @@ REMOVED ELEMENTS
   animation-duration: 0ms !important;
 }
 
+#reload-button:hover {
+  background-color: var(--sfsecondary) !important;
+}
+
 /* removes the firefox suggest text from urlbarview */
 .urlbarView-row[label="Firefox Suggest"]::before {
   display: none !important;
@@ -276,6 +318,10 @@ REMOVED ELEMENTS
 }
 
 /* Bookmarks bar  */
+#PersonalToolbar {
+  padding-inline: 0.4rem !important;
+}
+
 .bookmark-item .toolbarbutton-icon {
   display: none;
 }
@@ -324,8 +370,6 @@ If this looks weird, comment out the window buttons section.
   /* list-style-image: url(")"); */
   list-style-image: url(./refresh-ccw.svg) !important;
   fill: white !important;
-  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(190deg)
-    brightness(104%) contrast(102%);
 }
 
 /* identity-block.css | chrome://browser/skin/identity-block/identity-block.css */
@@ -361,4 +405,9 @@ If this looks weird, comment out the window buttons section.
   fill: white !important;
   filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(190deg)
     brightness(104%) contrast(102%) !important;
+}
+
+#firefox-view-button {
+  list-style-image: url(./layers.svg) !important;
+  fill: white !important;
 }
