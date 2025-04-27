@@ -29,18 +29,15 @@ user_pref("network.ssl_tokens_cache_capacity", 10240);
 user_pref("media.wmf.dxva.d3d11.enabled", false);
 ***/
 
-/** HARDWARE ACCELERATION ***/
-user_pref("gfx.webrender.all", true);
-
 /** CUSTOM CSS ***/
 user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
 user_pref("svg.context-properties.content.enabled", true);
 
-/** REMOVE FIREFOX VIEW ***/
-user_pref("browser.tabs.firefox-view", false);
-
 /** REMOVE ALT KEY MENU ***/
 user_pref("ui.key.menuAccessKeyFocuses", false);
+
+/** REMOVE SIDEBAR REVAMP ***/
+user_pref("sidebar.revamp", false);
 
 /** REMOVE FULLSCREEN FADE IN AND OUT ***/
 user_pref("full-screen-api.transition-duration.enter", 0);
