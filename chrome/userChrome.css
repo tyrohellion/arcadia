@@ -264,6 +264,10 @@ REMOVED ELEMENTS
   box-shadow: none !important;
 }
 
+.urlbarView-row[type="dynamic"] {
+  display: none !important;
+}
+
 .urlbarView-row:hover > .urlbarView-row-inner {
   background-color: #19171a !important;
 }
