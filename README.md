@@ -1,9 +1,7 @@
 ## Preview
-![](https://github.com/tyrohellion/arcadia/blob/master/arcadia.webp)
+![](https://github.com/tyrohellion/arcadia/blob/master/arcadiapreview.gif)
 ## Preview
 ![](https://github.com/tyrohellion/arcadia/blob/master/1.png)
-## Urlbar view
-![](https://github.com/tyrohellion/arcadia/blob/master/2.png)
 
 ## What arcadia offers
     -Minimal UI (Dark theme only)
@@ -12,6 +10,8 @@
     -Fastfox (from the Betterfox project) integrated through user.js by default
     -Keeps prefetching for certain websites that choose to use it
     -Natural Smooth Scrolling V3 from the BetterFox project
+    -Replaced reload, firefox view, and website permissions icons
+    -Constantly maintained and updated
 
 ## Installation
 
