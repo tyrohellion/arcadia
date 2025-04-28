@@ -163,6 +163,14 @@ REMOVED ELEMENTS
   display: none !important;
 }
 
+.tab-icon-pending {
+  display: none !important;
+}
+
+.tab-icon-stack {
+  display: none !important;
+}
+
 .tab-icon-overlay {
   display: none !important;
 }
