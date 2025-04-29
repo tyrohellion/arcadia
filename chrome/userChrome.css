@@ -236,6 +236,28 @@ REMOVED ELEMENTS
 }
 */
 
+.urlbar-input-box {
+  margin-left: 0.3rem !important;
+}
+
+#urlbar[breakout][breakout-extend] {
+  margin-left: 0 !important;
+}
+
+#urlbar[breakout][breakout-extend] {
+  & > .urlbar-input-container {
+    padding-inline: 0px !important;
+  }
+}
+
+#identity-box[pageproxystate="valid"]:is(.notSecureText, .chromeUI, .extensionPage), #urlbar-label-box {
+  margin-inline-end: 4px !important;
+}
+
+.urlbar-input-container {
+  padding: 0px !important;
+}
+
 #urlbar-input::selection {
   background-color: #455074 !important;
 }
@@ -343,10 +365,6 @@ REMOVED ELEMENTS
   padding-bottom: 1px;
 }
 
-toolbarbutton.bookmark-item:not(.subviewbutton) {
-  min-width: 1.6em;
-}
-
 /* Toolbar  */
 #tracking-protection-icon-container,
 #urlbar-zoom-button,
@@ -389,16 +407,6 @@ If this looks weird, comment out the window buttons section.
 #identity-box[pageproxystate="valid"].mixedActiveBlocked #identity-icon {
   /* list-style-image: url(chrome://global/skin/icons/security.svg); */
   list-style-image: url(./lock.svg) !important;
-  fill: white !important;
-  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(190deg)
-    brightness(104%) contrast(102%);
-}
-
-/* tabs.css | chrome://browser/skin/tabs.css */
-#tabs-newtab-button,
-#TabsToolbar #new-tab-button {
-  /* list-style-image: url(chrome://global/skin/icons/plus.svg); */
-  list-style-image: url(./plus.svg) !important;
   fill: white !important;
   filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(190deg)
     brightness(104%) contrast(102%);
