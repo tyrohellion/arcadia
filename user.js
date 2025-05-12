@@ -33,6 +33,12 @@ user_pref("media.wmf.dxva.d3d11.enabled", false);
 user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
 user_pref("svg.context-properties.content.enabled", true);
 
+/** MAKE SURE DARK THEME IS SET TO ENSURE THEME WORKS ***/
+user_pref("extensions.activeThemeID", "firefox-compact-dark@mozilla.org");
+
+/** ALWAYS SHOW BOOKMARKS BAR BY DEFAULT ***/
+user_pref("browser.toolbars.bookmarks.visibility", "always");
+
 /** REMOVE ALT KEY MENU ***/
 user_pref("ui.key.menuAccessKeyFocuses", false);
 
