@@ -259,7 +259,13 @@ REMOVED ELEMENTS
 }
 
 #urlbar-input::selection {
+  color: white !important;
   background-color: #455074 !important;
+}
+
+.urlbarView-row {
+  border: 1px solid transparent !important;
+  border-radius: 0 !important;
 }
 
 #blocked-permissions-container {
@@ -294,7 +300,7 @@ REMOVED ELEMENTS
   box-shadow: none !important;
 }
 
-.urlbarView-row[type="dynamic"] {
+.urlbarView-row[type="dynamic"], .urlbarView-row[rich-suggestion=""] {
   display: none !important;
 }
 
