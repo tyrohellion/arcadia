@@ -128,12 +128,55 @@ toolbar .toolbarbutton-1 {
   padding-right: 0.5rem !important;
 }
 
+/* urlbar searchmode switcher */
+
+#urlbar-searchmode-switcher {
+  display: none !important;
+}
+
+/* if you want to enable the searchmode switcher, this theme has support. Just uncomment this section and comment out the display none block right above this comment
+#urlbar-searchmode-switcher {
+  &[open] {
+    background-color: transparent !important;
+  }
+}
+
+#urlbar-searchmode-switcher {
+  #urlbar[focused] & {
+    background-color: transparent !important;
+  }
+}
+
+#urlbar-searchmode-switcher {
+#urlbar[searchmode] & {
+background-color: transparent !important;
+}
+}
+
+#searchmode-switcher-chicklet {
+  background-color: transparent !important;
+}
+
+@media -moz-pref("browser.urlbar.searchModeSwitcher.featureGate") or -moz-pref("browser.urlbar.scotchBonnet.enableOverride") {
+  @media not -moz-pref("browser.urlbar.unifiedSearchButton.always") {
+    #urlbar-searchmode-switcher {
+    background-color: transparent !important;
+    }
+  }
+}
+
+*/
+
 /* 
 REMOVED ELEMENTS
 */
 
 #page-action-buttons {
   display: none;
+}
+
+#urlbar-revert-button-container {
+  display: none !important;
 }
 
 /* Tabs elements  */
