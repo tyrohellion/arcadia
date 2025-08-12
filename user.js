@@ -31,9 +31,6 @@ user_pref("media.memory_cache_max_size", 65536);
 user_pref("media.cache_readahead_limit", 7200);
 user_pref("media.cache_resume_threshold", 3600);
 
-/** JS COMPRESSION LEVEL ***/
-user_pref("browser.cache.jsbc_compression_level", 3);
-
 /** IMAGE CACHE ***/
 user_pref("image.mem.decode_bytes_at_a_time", 32768);
 
@@ -92,3 +89,4 @@ user_pref("general.smoothScroll.msdPhysics.slowdownSpringConstant", 250);
 user_pref("general.smoothScroll.currentVelocityWeighting", "1");
 user_pref("general.smoothScroll.stopDecelerationWeighting", "1");
 user_pref("mousewheel.default.delta_multiplier_y", 265); // 250-400; adjust this number to your liking
+
