@@ -1,6 +1,6 @@
-/* 
-COLORS
-*/
+/*
+ * COLORS
+ */
 
 :root {
   --sfwindow: #19171a;
@@ -75,12 +75,21 @@ toolbar .toolbarbutton-1 {
   }
 }
 
-:root:not([privatebrowsingmode]) :is(toolbarbutton, toolbarpaletteitem) ~ #tabbrowser-tabs, :root[privatebrowsingmode] :is(toolbarbutton:not(#firefox-view-button), toolbarpaletteitem:not(#wrapper-firefox-view-button)) ~ #tabbrowser-tabs {
+:root:not([privatebrowsingmode])
+  :is(toolbarbutton, toolbarpaletteitem)
+  ~ #tabbrowser-tabs,
+:root[privatebrowsingmode]
+  :is(
+    toolbarbutton:not(#firefox-view-button),
+    toolbarpaletteitem:not(#wrapper-firefox-view-button)
+  )
+  ~ #tabbrowser-tabs {
   border-inline-start: none !important;
-  padding-inline-start: calc(var(--tab-overflow-pinned-tabs-width) + 0px) !important;
+  padding-inline-start: calc(
+    var(--tab-overflow-pinned-tabs-width) + 0px
+  ) !important;
   margin-inline-start: 0px !important;
 }
-
 
 /* indicator box (lock icon/firefox icon) */
 #identity-icon-box {
@@ -135,41 +144,41 @@ toolbar .toolbarbutton-1 {
 }
 
 /* if you want to enable the searchmode switcher, this theme has support. Just uncomment this section and comment out the display none block right above this comment
-#urlbar-searchmode-switcher {
-  &[open] {
-    background-color: transparent !important;
-  }
-}
+ * #urlbar-searchmode-switcher {
+ *  &[open] {
+ *    background-color: transparent !important;
+ *  }
+ * }
+ *
+ * #urlbar-searchmode-switcher {
+ *  #urlbar[focused] & {
+ *    background-color: transparent !important;
+ *  }
+ * }
+ *
+ * #urlbar-searchmode-switcher {
+ * #urlbar[searchmode] & {
+ * background-color: transparent !important;
+ * }
+ * }
+ *
+ * #searchmode-switcher-chicklet {
+ *  background-color: transparent !important;
+ * }
+ *
+ * @media -moz-pref("browser.urlbar.searchModeSwitcher.featureGate") or -moz-pref("browser.urlbar.scotchBonnet.enableOverride") {
+ *  @media not -moz-pref("browser.urlbar.unifiedSearchButton.always") {
+ *    #urlbar-searchmode-switcher {
+ *    background-color: transparent !important;
+ *    }
+ *  }
+ * }
+ *
+ */
 
-#urlbar-searchmode-switcher {
-  #urlbar[focused] & {
-    background-color: transparent !important;
-  }
-}
-
-#urlbar-searchmode-switcher {
-#urlbar[searchmode] & {
-background-color: transparent !important;
-}
-}
-
-#searchmode-switcher-chicklet {
-  background-color: transparent !important;
-}
-
-@media -moz-pref("browser.urlbar.searchModeSwitcher.featureGate") or -moz-pref("browser.urlbar.scotchBonnet.enableOverride") {
-  @media not -moz-pref("browser.urlbar.unifiedSearchButton.always") {
-    #urlbar-searchmode-switcher {
-    background-color: transparent !important;
-    }
-  }
-}
-
-*/
-
-/* 
-REMOVED ELEMENTS
-*/
+/*
+ * REMOVED ELEMENTS
+ */
 
 #page-action-buttons {
   display: none;
@@ -273,11 +282,11 @@ REMOVED ELEMENTS
 /* Url Bar  */
 
 /*   not sure if I want to add this or not
-.urlbarView-favicon,
-.urlbarView-type-icon {
-  display: none;
-}
-*/
+ * .urlbarView-favicon,
+ * .urlbarView-type-icon {
+ *  display: none;
+ * }
+ */
 
 .urlbar-input-box {
   margin-left: 0.3rem !important;
@@ -293,7 +302,12 @@ REMOVED ELEMENTS
   }
 }
 
-#identity-box[pageproxystate="valid"]:is(.notSecureText, .chromeUI, .extensionPage), #urlbar-label-box {
+#identity-box[pageproxystate="valid"]:is(
+    .notSecureText,
+    .chromeUI,
+    .extensionPage
+  ),
+#urlbar-label-box {
   margin-inline-end: 4px !important;
 }
 
@@ -343,7 +357,8 @@ REMOVED ELEMENTS
   box-shadow: none !important;
 }
 
-.urlbarView-row[type="dynamic"], .urlbarView-row[rich-suggestion=""] {
+.urlbarView-row[type="dynamic"],
+.urlbarView-row[rich-suggestion=""] {
   display: none !important;
 }
 
@@ -430,16 +445,25 @@ REMOVED ELEMENTS
   color: #dedede !important;
 }
 
+.urlbar-background {
+  background-color: var(--sfsecondary) !important;
+  box-shadow: none !important;
+}
+
+[open] > .urlbar-background {
+  border: none !important;
+}
+
 /*
-
-ICONS
-
-Icons from Feather Icons
-https://feathericons.com/
-
-Only tested on windows, may lack support on MacOS/Linux.
-If this looks weird, comment out the window buttons section.
-*/
+ *
+ * ICONS
+ *
+ * Icons from Feather Icons
+ * https://feathericons.com/
+ *
+ * Only tested on windows, may lack support on MacOS/Linux.
+ * If this looks weird, comment out the window buttons section.
+ */
 
 /* browser-aero.css | chrome://browser/skin/browser-aero.css */
 /* toolbarbutton-icons.css | chrome://browser/skin/toolbarbutton-icons.css */
