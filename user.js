@@ -90,3 +90,5 @@ user_pref("general.smoothScroll.currentVelocityWeighting", "1");
 user_pref("general.smoothScroll.stopDecelerationWeighting", "1");
 user_pref("mousewheel.default.delta_multiplier_y", 265); // 250-400; adjust this number to your liking
 
+/** USE NATIVE KDE PLASMA FILE PICKER ON LINUX INSTEAD OF GTK WHILE XDG DESKTOP PORTAL KDE PACKAGE IS INSTALLED ***/
+user_pref("widget.use-xdg-desktop-portal.file-picker", 1);
