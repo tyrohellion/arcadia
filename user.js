@@ -1,57 +1,6 @@
-/** GENERAL ***/
-user_pref("content.notify.interval", 100000);
-
-/** GFX ***/
-user_pref("gfx.webrender.all", true); // enables WR + additional features
-user_pref("gfx.webrender.precache-shaders", true); // longer initial startup time
-user_pref("gfx.webrender.compositor", true); // DEFAULT WINDOWS macOS
-user_pref("gfx.webrender.compositor.force-enabled", true);
-user_pref("gfx.canvas.accelerated.cache-items", 4096);
-user_pref("gfx.canvas.accelerated.cache-size", 512);
-user_pref("gfx.content.skia-font-cache-size", 20);
-user_pref("gfx.webrender.dcomp-video-hw-overlay-win", true);
-user_pref("gfx.webrender.dcomp-video-hw-overlay-win-force-enabled", true);
-user_pref("gfx.webrender.dcomp-video-sw-overlay-win", true);
-user_pref("gfx.webrender.dcomp-video-sw-overlay-win-force-enabled", true);
-
-/** HARDWARE ACCELERATION ***/
-user_pref("layers.gpu-process.enabled", true); // DEFAULT WINDOWS
-user_pref("layers.gpu-process.force-enabled", true); // enforce
-user_pref("layers.mlgpu.enabled", true); // LINUX
-user_pref("media.hardware-video-decoding.enabled", true); // DEFAULT WINDOWS macOS
-user_pref("media.hardware-video-decoding.force-enabled", true); // enforce
-user_pref("media.ffmpeg.vaapi.enabled", true); // LINUX
-user_pref("media.gpu-process-decoder", true); // DEFAULT WINDOWS
-
-/** DISK CACHE ***/
-user_pref("browser.cache.disk.enable", true);
-
-/** MEDIA CACHE ***/
-user_pref("media.memory_cache_max_size", 65536);
-user_pref("media.cache_readahead_limit", 7200);
-user_pref("media.cache_resume_threshold", 3600);
-
-/** IMAGE CACHE ***/
-user_pref("image.mem.decode_bytes_at_a_time", 32768);
-
-/** NETWORK ***/
-user_pref("network.http.max-connections", 1800);
-user_pref("network.http.max-persistent-connections-per-server", 10);
-user_pref("network.http.max-urgent-start-excessive-connections-per-host", 5);
-user_pref("network.http.pacing.requests.enabled", false);
-user_pref("network.dnsCacheExpiration", 3600);
-user_pref("network.ssl_tokens_cache_capacity", 10240);
-
-/** YOUTUBE (this flag COULD give you better VP9 performance on SOME systems)
-user_pref("media.wmf.dxva.d3d11.enabled", false);
-***/
-
 /** CUSTOM CSS ***/
 user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
 user_pref("svg.context-properties.content.enabled", true);
-
-/** MAKE SURE DARK THEME IS SET TO ENSURE THEME WORKS ***/
-user_pref("extensions.activeThemeID", "firefox-compact-dark@mozilla.org");
 
 /** ALWAYS SHOW BOOKMARKS BAR BY DEFAULT ***/
 user_pref("browser.toolbars.bookmarks.visibility", "always");
